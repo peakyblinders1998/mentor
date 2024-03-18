@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" />
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img class="hambuger" src="/ecommerce-product-page-main/images/icon-menu.svg" alt="" />
+
+      <nav class="navbar">
+
+        <div>
+          <img src="/ecommerce-product-page-main/images/logo.svg" alt="">
+        </div>
+
+        <div class="links">
+          <ul class="list">
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="fav">
+          <div>
+            <img src="/ecommerce-product-page-main/images/icon-cart.svg" alt="" />
+          </div>
+
+          <div>
+            <img src="/ecommerce-product-page-main/images/image-avatar.png" alt="" width="40px" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <div>
+          <img class="shoes" src="/ecommerce-product-page-main/images/image-product-1.jpg" alt="" width="360" />
+        </div>
+        <div class="section">
+          <div>
+            <img src="/ecommerce-product-page-main/images/" alt="" />
+          </div>
+          <div>
+            <img src="/ecommerce-product-page-main/images/image-product-1-thumbnail.jpg" alt="" width="60" />
+          </div>
+          <div>
+            <img src="/ecommerce-product-page-main/images/image-product-1.jpg" alt="" width="60px" />
+          </div>
+          <div>
+            <img src="/ecommerce-product-page-main/images/image-product-2-thumbnail.jpg" alt="" width="60px" />
+          </div>
+          <div>
+            <img src="/ecommerce-product-page-main/images/image-product-2.jpg" alt="" width="60px" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3>sneakers Company</h3>
+        <h1>Fall Limited Edition<br />sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear<br />
+          companion. Featuring a durable rubber outer sole, they’ll<br />
+          withstand everything the weather can offer.
+        </p>
+
+        <h4>$125.00 <span class="spark">50%</span></h4>
+        <h4 class="true">$250.00</h4>
+
+        <div class="items">
+          <div class="icon-minus">
+            <div>
+              <img id="minusButton" src="/ecommerce-product-page-main/images/icon-minus.svg" alt="" />
+            </div>
+            <span id="counter">0</span>
+            <div>
+              <img id="plusButton" src="/ecommerce-product-page-main/images/icon-plus.svg" alt="" />
+            </div>
+          </div>
+          <div class="cat">
+            <a href="" class="white">
+              <img class="product" src="/ecommerce-product-page-main/images/icon-cart.svg" width="20px" />
+              Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">
+      mohamed bah</a>.
+  </div>
+
+  <script>
+    const plusButton = document.getElementById("plusButton");
+
+    const counter = document.getElementById("counter");
+
+    let count = 0;
+
+    plusButton.addEventListener("click", function () {
+      count++;
+
+      counter.textContent = count;
+    });
+    const minusButton = document.getElementById("minusButton");
+    let num = 0;
+    minusButton.addEventListener("click", function () {
+      if (count > 0) {
+        count--;
+        counter.textContent = count;
+      }
+    });
+    // function toggleMenu() {
+    //   var navbar = document.querySelector(".hambuger");
+    //   navbar.classList.toggle("list");
+    // }
+    function toggleHambuger() {
+      var navbar = document.querySelector('.hambuger');
+      navbar.classList.toggle('.list')
+    }
+  </script>
+</body>
+
+</html>
